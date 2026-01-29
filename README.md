@@ -7,10 +7,17 @@ The official landing page for **Resonate** - an Open Source social voice platfor
 Resonate is a social voice platform, similar to Clubhouse and Twitter Spaces, but completely Open Source. It aims to enhance credibility within the open-source community, attract users, and foster growth through real-time audio communication.
 
 **Key Features of the App:**
-*   Real-time Audio Communication.
-*   Create rooms and moderate speakers/events.
-*   Pair chatting for random partner matching.
-*   Real-time messaging (Coming Soon).
+1. Real-time Audio Communication by joining rooms and talking to people.
+2. Ability to create rooms and moderate speakers and events.
+3. Create Scheduled Rooms and notify subscribers as reminders to join
+4. Listen to and create Stories as chapters with synced lyrics, browse through entire catalog of stories following your favorite  creators and waiting for their latest chapter/story releases. Post your own stories having chapters. 
+5. Pair chatting to enable users to find random partners to talk to in the app.
+6. Friend People/Profiles enabling your self to talk on voice calls/realtime messaging with them
+
+## :link: Repository Links
+
+1. [Resonate Flutter App](https://github.com/AOSSIE-Org/Resonate)
+2. [Resonate Backend](https://github.com/AOSSIE-Org/Resonate-Backend)
 
 ## 💻 Tech Stack
 
@@ -18,7 +25,7 @@ This website is built using modern web technologies to ensure a smooth and engag
 
 *   **[React](https://reactjs.org/)**: Frontend library for building the user interface.
 *   **[GSAP](https://greensock.com/gsap/)**: For high-performance animations (ScrollTrigger).
-*   **[Lenis](https://github.com/studio-freight/lenis)**: For smooth, inertial scrolling.
+*   **[Lenis](https://github.com/darkroomengineering/lenis)**: For smooth, inertial scrolling.
 *   **[React Icons](https://react-icons.github.io/react-icons/)**: For vector icons.
 
 ## 🛠️ Installation & Setup
@@ -26,14 +33,14 @@ This website is built using modern web technologies to ensure a smooth and engag
 Follow these steps to set up the project locally.
 
 ### Prerequisites
-*   Node.js (v14 or higher)
+*   Node.js (v18+ or v20 LTS recommended)
 *   npm or yarn
 
 ### Steps
 
 1.  **Clone the repository**
     ```bash
-    git clone https://github.com/AOSSIE/Resonate-Website.git
+    git clone https://github.com/AOSSIE-Org/Resonate-Website.git
     cd Resonate-Website
     ```
 
@@ -74,7 +81,7 @@ src/
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see the [AOSSIE contribution guidelines](https://github.com/AOSSIE/.github/blob/main/CONTRIBUTING.md) for more details.
+We welcome contributions! Please see the [AOSSIE contribution guidelines](https://github.com/AOSSIE-Org/Resonate-Website/blob/main/CONTRIBUTING.md) for more details.
 
 1.  Fork the Project
 2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
