@@ -68,7 +68,7 @@ Follow these steps to set up the project locally.
     npm run build
     ```
 
-    This creates an optimized build in the `.next` folder.
+    This creates an optimized static export in the `out` folder.
 
 5.  **Start production server**
     ```bash
