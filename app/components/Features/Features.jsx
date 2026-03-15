@@ -49,6 +49,7 @@ const Features = () => {
               alt={`Feature ${feature.id}`}
               width={400}
               height={300}
+              draggable={false}
             />
           </div>
           <div className="feature-content">

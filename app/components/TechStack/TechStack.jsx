@@ -9,10 +9,10 @@ const TechStack = () => {
         <h2>TECH STACK</h2>
         <div className="tech-logos">
           <div className="tech-logo">
-            <img src={flutterLogo.src} alt="Flutter" />
+            <img src={flutterLogo.src} alt="Flutter"  draggable={false} />
           </div>
           <div className="tech-logo">
-            <img src={appwriteLogo.src} alt="Appwrite" />
+            <img src={appwriteLogo.src} alt="Appwrite"  draggable={false} />
           </div>
         </div>
       </div>
