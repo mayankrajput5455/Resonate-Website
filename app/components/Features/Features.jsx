@@ -40,7 +40,7 @@ const Features = () => {
       {featuresData.map((feature) => (
         <div
           key={feature.id}
-          id={feature.id === 4 ? "features-end" : undefined} // 👈 trigger for navbar hide
+          id={feature.id === 4 ? "features-end" : undefined}
           className={`feature-item ${
             feature.align === "right" ? "reverse" : ""
           }`}
