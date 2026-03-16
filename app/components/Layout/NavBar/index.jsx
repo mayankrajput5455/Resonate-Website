@@ -1,26 +1,44 @@
 "use client";
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import "./Navbar.css";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+
 const Logo = { src: "/resonate_logo_white.png" };
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [visible, setVisible] = useState(true);
 
-  // Scroll to top and close mobile menu
   const scrollToTop = useCallback(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     setOpen(false);
   }, []);
 
-  // Close menu when a link is clicked
-  const handleLinkClick = useCallback(() => setOpen(false), []);
+  const handleLinkClick = () => setOpen(false);
+  const handleToggleMenu = () => setOpen((prev) => !prev);
 
-  // Toggle mobile menu
-  const handleToggleMenu = useCallback(() => setOpen((prev) => !prev), []);
+  // 🔹 Detect scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      const marker = document.getElementById("features-end");
+
+      if (!marker) return;
+
+      const markerTop = marker.getBoundingClientRect().top;
+
+      if (markerTop < 80) {
+        setVisible(false);
+      } else {
+        setVisible(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${visible ? "show" : "hide"}`}>
       <div className="navbar-container">
         {/* Logo */}
         <div
@@ -32,7 +50,7 @@ const Navbar = () => {
           <span className="logo-text">Resonate</span>
         </div>
 
-        {/* Hamburger button for mobile */}
+        {/* Hamburger */}
         <button
           className="hamburger"
           onClick={handleToggleMenu}
@@ -42,7 +60,7 @@ const Navbar = () => {
           ☰
         </button>
 
-        {/* Navigation links */}
+        {/* Links */}
         <div className={`navbar-links ${open ? "open" : ""}`}>
           <a
             href="https://aossie.org"
